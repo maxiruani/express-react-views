@@ -14,7 +14,7 @@ function testComponent(path, cb) {
     assert(!err, `Rendering ${path}: Did not throw`);
     assert.equal(
       source,
-      '<!DOCTYPE html><div><h1></h1><p>Welcome to </p><p>I can count to 10:1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p></div>',
+      '<!DOCTYPE html><div data-reactroot=""><h1></h1><p>Welcome to </p><p>I can count to 10:<!-- -->1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p></div>',
       `Rendering ${path}: generated expected content`
     );
     cb();

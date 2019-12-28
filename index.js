@@ -66,7 +66,7 @@ function createEngine(engineOptions) {
       var component = require(filename);
       // Transpiled ES6 may export components as { default: Component }
       component = component.default || component;
-      markup += ReactDOMServer.renderToStaticMarkup(
+      markup += ReactDOMServer.renderToString(
         React.createElement(component, options)
       );
     } catch (e) {
